@@ -1,6 +1,12 @@
 import Head from 'next/head';
+import Nav from '@components/Nav';
+import { useState } from 'react';
+import { BoxLoading } from 'react-loadingg';
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => setLoading(false), 3500);
+
   return (
     <div>
       <Head>
@@ -71,9 +77,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-cyan-600">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        {loading && (
+          <div>
+            <BoxLoading color="#da61a5" />
+          </div>
+        )}
+        {!loading && <Nav />}
       </main>
     </div>
   );
