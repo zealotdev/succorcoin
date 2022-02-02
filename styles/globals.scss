@@ -18,3 +18,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.bg-hero__right {
+  background-image: url('/images/hero-bg-cover.jpg');
+  min-height: calc(100vh - 220px);
+}
+// .bg-hero__left {
+//   background-image: url('/images/hero-bg-left.jpg');
+//   background-position: left;
+// }

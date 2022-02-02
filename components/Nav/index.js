@@ -13,7 +13,7 @@ export default function Nav() {
   return (
     <div>
       <div className="py-3 bg-gray-100">
-        <div className="max-w-5xl mx-auto text-gray-400 text-md flex justify-between content-center">
+        <div className="max-w-5xl mx-auto text-gray-500 text-md flex justify-between content-center">
           <span className="flex space-x-2 cursor-pointer hover:text-pink-400">
             <MdMarkEmailUnread size={25} /> <span>jorgedoe@gmail.com</span>
           </span>
@@ -33,7 +33,7 @@ export default function Nav() {
           </span>
         </div>
       </div>
-      <nav className=" bg-white py-4 border-t-2 border-gray-100 shadow-md">
+      <nav className=" bg-white py-4 border-t-2 border-gray-100 drop-shadow">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
           <Image
             src="/logo-large.png"
@@ -42,7 +42,7 @@ export default function Nav() {
             alt="succorcoin-site"
           />
           <div className="flex space-x-12">
-            <ul className="flex space-x-4 text-gray-400 text-sm items-center">
+            <ul className="flex space-x-4 text-gray-500 text-sm items-center">
               {links.map((link) => {
                 return (
                   <li key={link} className="hover:text-pink-400 cursor-pointer">
