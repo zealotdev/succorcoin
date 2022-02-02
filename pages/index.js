@@ -1,11 +1,13 @@
 import Head from 'next/head';
 import Nav from '@components/Nav';
+import Hero from '@components/Hero';
+
 import { useState } from 'react';
 import { BoxLoading } from 'react-loadingg';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  setTimeout(() => setLoading(false), 3500);
+  setTimeout(() => setLoading(false), 2000);
 
   return (
     <div>
@@ -82,7 +84,14 @@ export default function Home() {
             <BoxLoading color="#da61a5" />
           </div>
         )}
-        {!loading && <Nav />}
+        {!loading && (
+          <div>
+            <Nav />
+            <section className="max-w-5xl mx-auto">
+              <Hero />
+            </section>
+          </div>
+        )}
       </main>
     </div>
   );
