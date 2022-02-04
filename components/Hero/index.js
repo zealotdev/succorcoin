@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap, Power3 } from 'gsap';
 
 import Image from 'next/image';
@@ -7,7 +7,7 @@ export default function Hero() {
   const leftContent = useRef();
   const rightContent = useRef();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.fromTo(
       leftContent.current,
       { opacity: 0, x: -720 },
@@ -21,9 +21,9 @@ export default function Hero() {
       { opacity: 1, x: 0, ease: Power3.easeIn, duration: 2 },
       []
     );
-  });
+  }, []);
   return (
-    <div className="flex justify-between mt-4 items-center bg-hero__right bg-cover bg-no-repeat">
+    <div className="flex justify-between mt-4 items-center hero-bg ">
       <div ref={leftContent} className="relative w-5/12 space-y-8">
         <h1 className="h1 text-gray-500 text-4xl">
           Automatic Contribution, Burning & Buyback System.
