@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './animation';
+
 html,
 body {
   padding: 0;
@@ -19,6 +21,11 @@ a {
   box-sizing: border-box;
 }
 
+section {
+  min-height: calc(100vh - 220px);
+  margin-top: 4rem;
+}
+
 .hero-bg {
   // background-image: url('/images/hero-bg-cover.jpg');
   min-height: calc(100vh - 220px);
@@ -27,7 +34,13 @@ a {
   background-image: url('/images/about-us-bg.svg');
   background-position: left;
 }
+.roadmap-bg {
+  background-image: url('/images/roadmap-bg.svg');
+  min-height: calc(100vh + 120px);
+  margin-top: 10rem;
+}
 
-section {
-  min-height: calc(100vh - 220px);
+footer {
+  background-image: url('/images/roadmap-bg.svg');
+  min-height: 20vh;
 }

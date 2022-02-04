@@ -20,7 +20,7 @@ export default function Ecosystem() {
 
     tl.fromTo(
       ecoRef.current,
-      { opacity: 0.1, y: 120 },
+      { opacity: 0.1, y: 100 },
       { opacity: 1, y: 0, duration: 1 }
     );
   }, []);

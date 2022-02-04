@@ -19,7 +19,7 @@ export default function AboutUs() {
     });
     tl.fromTo(
       aboutRef.current,
-      { opacity: 0.1, y: 120 },
+      { opacity: 0.1, y: 100 },
       { opacity: 1, y: 0, duration: 1 }
     );
   }, []);
