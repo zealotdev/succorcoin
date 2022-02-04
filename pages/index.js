@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Nav from '@components/Nav';
 import Hero from '@components/Hero';
+import AboutUs from '@components/AboutUs';
 
 import { useState } from 'react';
 import { BoxLoading } from 'react-loadingg';
@@ -89,6 +90,7 @@ export default function Home() {
             <Nav />
             <section className="max-w-5xl mx-auto">
               <Hero />
+              <AboutUs />
             </section>
           </div>
         )}

@@ -13,11 +13,11 @@ export default function Nav() {
   return (
     <div>
       <div className="py-3 bg-gray-100">
-        <div className="max-w-5xl mx-auto text-gray-500 text-md flex justify-between content-center">
-          <span className="flex space-x-2 cursor-pointer hover:text-pink-400">
+        <div className="max-w-5xl mx-auto text-gray-500 text-sm font-light flex justify-between content-center">
+          <span className="flex space-x-2 cursor-pointer text-gray-400 hover:text-pink-400">
             <MdMarkEmailUnread size={25} /> <span>jorgedoe@gmail.com</span>
           </span>
-          <span className="flex space-x-2">
+          <span className="flex space-x-2 text-gray-400">
             <FaTelegram
               size={25}
               className="cursor-pointer hover:text-pink-400"
