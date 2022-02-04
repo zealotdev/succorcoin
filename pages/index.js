@@ -8,6 +8,9 @@ import { BoxLoading } from 'react-loadingg';
 import Ecosystem from '@components/Ecosystem';
 import Charity from '@components/Charity';
 import NFTMarketPlace from '@components/NFTMarketPlace';
+import Roadmap from '@components/Roadmap';
+import Info from '@components/Info';
+import Footer from '@components/Footer';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -97,6 +100,9 @@ export default function Home() {
               <Ecosystem />
               <Charity />
               <NFTMarketPlace />
+              <Roadmap />
+              <Info />
+              <Footer />
             </div>
           </div>
         )}
