@@ -23,7 +23,7 @@ export default function Hero() {
     );
   }, []);
   return (
-    <div className="flex justify-between mt-4 items-center hero-bg ">
+    <div className="flex justify-between mt-4 items-center hero-bg lg:px-24 xl:px-36">
       <div ref={leftContent} className="relative w-5/12 space-y-8">
         <h1 className="h1 text-gray-500 text-4xl">
           Automatic Contribution, Burning & Buyback System.

@@ -5,6 +5,9 @@ import AboutUs from '@components/AboutUs';
 
 import { useState } from 'react';
 import { BoxLoading } from 'react-loadingg';
+import Ecosystem from '@components/Ecosystem';
+import Charity from '@components/Charity';
+import NFTMarketPlace from '@components/NFTMarketPlace';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -88,10 +91,13 @@ export default function Home() {
         {!loading && (
           <div>
             <Nav />
-            <section className="max-w-5xl mx-auto">
+            <div>
               <Hero />
               <AboutUs />
-            </section>
+              <Ecosystem />
+              <Charity />
+              <NFTMarketPlace />
+            </div>
           </div>
         )}
       </main>
