@@ -6,7 +6,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  width: 100vw;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -27,5 +26,8 @@ a {
 .about-us-bg {
   background-image: url('/images/about-us-bg.svg');
   background-position: left;
+}
+
+section {
   min-height: calc(100vh - 220px);
 }
