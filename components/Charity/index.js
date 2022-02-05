@@ -3,8 +3,8 @@ import { AiOutlineFilePdf } from 'react-icons/ai';
 export default function Charity() {
   const address = '0x5ebf759767827ba3a1763f8ed7fa61ed9abf27b7';
   return (
-    <div className="bg-gradient-to-br from-purple-400 to-pink-400 py-10">
-      <div className="flex flex-col items-center text-center space-y-8 max-w-6xl">
+    <div className="bg-gradient-to-br from-purple-400 to-pink-400 py-10 flex justify-center">
+      <div className="flex flex-col items-center text-center space-y-8">
         <div className="flex flex-col items-center space-y-2">
           <h2 className="text-sm text-white tracking-wider uppercase">
             Charity
