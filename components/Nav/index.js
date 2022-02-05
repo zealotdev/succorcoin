@@ -13,7 +13,7 @@ export default function Nav() {
   return (
     <div>
       <div className="py-3 bg-gray-100">
-        <div className="lg:px-24 xl:px-36 mx-auto text-gray-500 text-sm font-light flex justify-between content-center">
+        <div className="lg:px-24 xl:px-36 mx-auto text-gray-500 text-sm flex justify-between content-center">
           <span className="flex space-x-2 cursor-pointer text-gray-400 hover:text-pink-400">
             <MdMarkEmailUnread size={25} /> <span>jorgedoe@gmail.com</span>
           </span>
@@ -37,12 +37,12 @@ export default function Nav() {
         <div className="max-w-5xl mx-auto flex justify-between items-center">
           <Image
             src="/logo-large.png"
-            width={160}
-            height={40}
+            width={150}
+            height={35}
             alt="succorcoin-site"
           />
           <div className="flex space-x-12">
-            <ul className="flex space-x-4 text-gray-500 text-sm items-center">
+            <ul className="flex space-x-10 text-gray-500 text-sm items-center">
               {links.map((link) => {
                 return (
                   <li key={link} className="hover:text-pink-400 cursor-pointer">
@@ -67,7 +67,7 @@ export default function Nav() {
                 )}
               </li>
             </ul>
-            <button className="bg-pink-400 rounded-full text-gray-50 text-sm px-2 py-1 hover:bg-pink-500 hover:scale-105 duration-200">
+            <button className="bg-pink-400 rounded-full text-white py-2 px-3 text-sm uppercase hover:bg-pink-500 hover:scale-105 duration-200 ">
               Join Airdrop
             </button>
           </div>

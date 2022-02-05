@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @import './animation';
+@import './fonts';
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Niramit', sans-serif;
 }
 
 a {
@@ -22,22 +22,24 @@ a {
 }
 
 section {
-  min-height: calc(100vh - 220px);
   margin-top: 4rem;
 }
 
 .hero-bg {
-  // background-image: url('/images/hero-bg-cover.jpg');
-  min-height: calc(100vh - 220px);
+  min-height: calc(100vh - 120px);
 }
 .about-us-bg {
-  background-image: url('/images/about-us-bg.svg');
-  background-position: left;
+  background-image: url('/images/about-right-dec.jpg');
+  height: 60vh;
 }
-.roadmap-bg {
-  background-image: url('/images/roadmap-bg.svg');
-  min-height: calc(100vh + 120px);
-  margin-top: 10rem;
+
+.ecosystem {
+  min-height: calc(100vh - 220px);
+}
+
+.hft-bg {
+  background-image: url('/images/slider-right-dec.jpeg');
+  min-height: 40vh;
 }
 
 footer {
