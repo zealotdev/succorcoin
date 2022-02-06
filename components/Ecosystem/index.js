@@ -40,7 +40,7 @@ export default function Ecosystem() {
         </p>
       </div>
       <div className="flex justify-between space-x-8 mt-8">
-        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center">
+        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg">
           <span className="text-white p-4 rounded-full bg-gradient-to-b from-pink-500 to-purple-500 flex items-center justify-center">
             <FaChartLine size={24} />
           </span>
@@ -55,7 +55,7 @@ export default function Ecosystem() {
             Buy/Sell
           </button>
         </div>
-        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center">
+        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg">
           <span className="text-white p-4 rounded-full bg-gradient-to-b from-pink-500 to-purple-500 flex items-center justify-center">
             <IoMdSwap size={24} />
           </span>
@@ -70,7 +70,7 @@ export default function Ecosystem() {
             Exchange
           </button>
         </div>
-        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center">
+        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg">
           <span className="text-white p-4 rounded-full bg-gradient-to-b from-pink-500 to-purple-500 flex items-center justify-center">
             <FaGamepad size={24} />
           </span>

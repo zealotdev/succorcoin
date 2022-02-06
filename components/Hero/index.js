@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <div className="flex justify-between mt-4 items-center hero-bg lg:px-24 xl:px-36">
       <div ref={leftContent} className="relative w-6/12 space-y-6">
-        <span className="text-purple-400 uppercase text-sm tracking-wider">
+        <span className="text-purple-400 uppercase text-sm tracking-wider font-semibold">
           Charity on Blockchain
         </span>
         <h1 className="h1 text-gray-500 text-4xl tracking-wide">

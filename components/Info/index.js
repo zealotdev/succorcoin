@@ -23,29 +23,7 @@ export default function Info() {
       infoRef.current,
       { opacity: 0.1, y: 100 },
       { opacity: 1, y: -20, duration: 1 }
-    )
-      .fromTo(
-        mailRef.current,
-        {
-          x: -200,
-        },
-        {
-          x: 0,
-          ease: Power3.easeIn,
-          duration: 1,
-        }
-      )
-      .fromTo(
-        faqRef.current,
-        {
-          x: 200,
-        },
-        {
-          x: 0,
-          ease: Power3.easeIn,
-          duration: 1,
-        }
-      );
+    );
   }, []);
 
   return (
