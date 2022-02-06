@@ -14,7 +14,7 @@ import Footer from '@components/Footer';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  setTimeout(() => setLoading(false), 2000);
+  setTimeout(() => setLoading(false), 1500);
 
   return (
     <div>

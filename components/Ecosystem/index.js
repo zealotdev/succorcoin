@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import gsap, { Power4 } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import { FaChartLine, FaGamepad } from 'react-icons/fa';
@@ -9,22 +9,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Ecosystem() {
   const ecoRef = useRef();
+  const cardRef1 = useRef();
+  const cardRef2 = useRef();
+  const cardRef3 = useRef();
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ecoRef.current,
-        start: 'top 80%',
-        end: 'top 30%',
-        markers: false,
-        scrub: 1,
+    const tl = gsap.timeline(
+      {
+        scrollTrigger: {
+          trigger: ecoRef.current,
+          start: 'top 90%',
+          end: 'top 30%',
+          markers: false,
+          scrub: 1,
+        },
       },
-    });
+      {
+        default: {
+          ease: Power4.easeInOut,
+          duration: 2,
+        },
+      }
+    );
 
     tl.fromTo(
       ecoRef.current,
       { opacity: 0.1, y: 100 },
       { opacity: 1, y: 0, duration: 1 }
+    ).fromTo(
+      [cardRef1.current, cardRef2.current, cardRef3.current],
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 2, stagger: 0.4 },
+      '-=1'
     );
   }, []);
 
@@ -40,7 +56,10 @@ export default function Ecosystem() {
         </p>
       </div>
       <div className="flex justify-between space-x-8 mt-8">
-        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg">
+        <div
+          className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg"
+          ref={cardRef1}
+        >
           <span className="text-white p-4 rounded-full bg-gradient-to-b from-pink-500 to-purple-500 flex items-center justify-center">
             <FaChartLine size={24} />
           </span>
@@ -55,7 +74,10 @@ export default function Ecosystem() {
             Buy/Sell
           </button>
         </div>
-        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg">
+        <div
+          className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg"
+          ref={cardRef2}
+        >
           <span className="text-white p-4 rounded-full bg-gradient-to-b from-pink-500 to-purple-500 flex items-center justify-center">
             <IoMdSwap size={24} />
           </span>
@@ -70,7 +92,10 @@ export default function Ecosystem() {
             Exchange
           </button>
         </div>
-        <div className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg">
+        <div
+          className="w-3/12 rounded flex flex-col space-y-4 items-center py-8 px-2 text-center hover:shadow cursor-pointer hover:rounded-lg"
+          ref={cardRef3}
+        >
           <span className="text-white p-4 rounded-full bg-gradient-to-b from-pink-500 to-purple-500 flex items-center justify-center">
             <FaGamepad size={24} />
           </span>

@@ -1,28 +1,64 @@
 import { useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import gsap, { Power4 } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function NFTMarketPlace() {
   const nftRef = useRef();
+  const mintRef = useRef();
+  const cardOneRef = useRef();
+  const cardTwoRef = useRef();
+  const cardThreeRef = useRef();
+  const cardFourRef = useRef();
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: nftRef.current,
-        start: 'top 90%',
-        end: 'top 20%',
-        markers: false,
-        scrub: 1,
+    const tl = gsap.timeline(
+      {
+        scrollTrigger: {
+          trigger: nftRef.current,
+          start: 'top 90%',
+          end: 'top 10%',
+          markers: false,
+          scrub: 1,
+        },
       },
-    });
+      {
+        default: {
+          ease: Power4.easeInOut,
+          duration: 2,
+        },
+      }
+    );
 
     tl.fromTo(
       nftRef.current,
       { opacity: 0.1, y: 100 },
-      { opacity: 1, y: 0, duration: 1 }
-    );
+      { opacity: 1, y: 0, duration: 2 }
+    )
+      .from(
+        [
+          cardOneRef.current,
+          cardTwoRef.current,
+          cardThreeRef.current,
+          cardFourRef.current,
+        ],
+        { scaleY: 0, stagger: 0.3, duration: 2 },
+        '-=1'
+      )
+      .fromTo(
+        mintRef.current,
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 2,
+        },
+        '-=.5'
+      );
   }, []);
   return (
     <section
@@ -40,7 +76,10 @@ export default function NFTMarketPlace() {
         </div>
 
         <div className="flex justify-between space-x-8 mt-8">
-          <div className="w-44 h-64 shadow rounded flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center">
+          <div
+            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            ref={cardOneRef}
+          >
             <div className="balls">
               <div></div>
               <div></div>
@@ -48,7 +87,10 @@ export default function NFTMarketPlace() {
             </div>
             <p className="text-gray-500 text-sm">coming soon</p>
           </div>
-          <div className="w-44 h-64 shadow rounded flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center">
+          <div
+            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            ref={cardTwoRef}
+          >
             <div className="balls">
               <div></div>
               <div></div>
@@ -56,7 +98,10 @@ export default function NFTMarketPlace() {
             </div>
             <p className="text-gray-500 text-sm">coming soon</p>
           </div>
-          <div className="w-44 h-64 shadow rounded flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center">
+          <div
+            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            ref={cardThreeRef}
+          >
             <div className="balls">
               <div></div>
               <div></div>
@@ -64,7 +109,10 @@ export default function NFTMarketPlace() {
             </div>
             <p className="text-gray-500 text-sm">coming soon</p>
           </div>
-          <div className="w-44 h-64 shadow rounded flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center">
+          <div
+            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            ref={cardFourRef}
+          >
             <div className="balls">
               <div></div>
               <div></div>
@@ -73,7 +121,10 @@ export default function NFTMarketPlace() {
             <p className="text-gray-500 text-sm">Coming soon</p>
           </div>
         </div>
-        <div className="bg-gradient-to-br from-purple-400 to-pink-400 py-6 flex flex-col items-center w-10/12 h-72 rounded-lg justify-center">
+        <div
+          className="bg-gradient-to-br from-purple-400 to-pink-400 py-6 flex flex-col items-center w-10/12 h-72 rounded-lg justify-center"
+          ref={mintRef}
+        >
           <span className="text-white font-bold tracking-wider text-3xl cursor-pointer">
             Are you an artist? Mint your NFT NOW
           </span>
