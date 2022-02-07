@@ -66,7 +66,7 @@ export default function Info() {
         Get in touch with us <span className="text-purple-400">NOW</span>
       </p>
       <span className="h-0.5 w-16 bg-purple-400 block rounded-lg mt-4"></span>
-      <div className="flex justify-between w-8/12 mt-14">
+      <div className="hidden md:flex justify-between w-8/12 mt-14">
         <div
           className="bg-gradient-to-br from-pink-400 to-purple-400 py-4 px-4 rounded text-white flex flex-col space-y-4"
           ref={mailRef}

@@ -44,7 +44,7 @@ export default function Roadmap() {
         <p className="font-semibold text-2xl tracking-wide text-gray-700">
           Pathway towards <span className="text-purple-400">the future</span>
         </p>
-        <span className="mt-14">
+        <span className="mt-14 hidden md:block">
           <Image
             src="/images/roadmap.svg"
             height={400}

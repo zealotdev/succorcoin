@@ -75,7 +75,7 @@ export default function NFTMarketPlace() {
           </p>
         </div>
 
-        <div className="flex justify-between space-x-8 mt-8">
+        <div className="hidden md:flex justify-between space-x-8 mt-8">
           <div
             className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
             ref={cardOneRef}
@@ -122,7 +122,7 @@ export default function NFTMarketPlace() {
           </div>
         </div>
         <div
-          className="bg-gradient-to-br from-purple-400 to-pink-400 py-6 flex flex-col items-center w-10/12 h-72 rounded-lg justify-center"
+          className="bg-gradient-to-br from-purple-400 to-pink-400 py-6 hidden md:flex flex-col items-center w-10/12 h-72 rounded-lg justify-center"
           ref={mintRef}
         >
           <span className="text-white font-bold tracking-wider text-3xl cursor-pointer">

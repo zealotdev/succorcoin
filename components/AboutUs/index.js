@@ -78,12 +78,12 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <section
-      ref={aboutRef}
-      className="about-us-bg bg-no-repeat bg-left bg-contain flex flex-col justify-center lg:px-24 xl:px-36"
-    >
-      <div>
-        <div className="flex justify-evenly">
+    <section className="about-us-bg bg-no-repeat bg-left bg-contain">
+      <div
+        ref={aboutRef}
+        className="hidden md:flex flex-col justify-center lg:px-24 xl:px-36"
+      >
+        <div className="flex justify-between">
           <div className="flex flex-col space-y-4 w-6/12">
             <h2 className="text-sm text-purple-400 tracking-wider uppercase">
               About Us
