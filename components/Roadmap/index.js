@@ -34,7 +34,7 @@ export default function Roadmap() {
   }, []);
   return (
     <section
-      className="flex flex-col lg:px-24 xl:px-36 pt-20 items-center"
+      className="flex flex-col px-4 lg:px-24 xl:px-36 pt-20 items-center mb-16 md:mb-12"
       ref={roadmapRef}
     >
       <div className="flex flex-col items-center space-y-3">
@@ -44,7 +44,7 @@ export default function Roadmap() {
         <p className="font-semibold text-2xl tracking-wide text-gray-700">
           Pathway towards <span className="text-purple-400">the future</span>
         </p>
-        <span className="mt-14 hidden md:block">
+        <span className="mt-14">
           <Image
             src="/images/roadmap.svg"
             height={400}

@@ -28,11 +28,8 @@ export default function Footer() {
   }, []);
   const date = new Date();
   return (
-    <footer className="hidden bg-no-repeat bg-cover h-48 md:flex flex-col items-center justify-end lg:px-24 xl:px-36 pb-8 text-white text-sm mt-12">
-      <div
-        ref={footerContentRef}
-        className="hidden md:flex flex-col items-center"
-      >
+    <footer className="bg-no-repeat bg-cover h-32 md:h-48 flex flex-col items-center justify-end lg:px-24 xl:px-36 pb-8 text-white text-sm">
+      <div ref={footerContentRef} className="flex flex-col items-center">
         <span>
           Copyright©{date.getFullYear()} Succorcoin, All rights reserved.
         </span>

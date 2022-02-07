@@ -62,7 +62,7 @@ export default function NFTMarketPlace() {
   }, []);
   return (
     <section
-      className="hft-bg bg-no-repeat bg-right bg-auto h-auto flex flex-col lg:px-24 xl:px-36 pt-20"
+      className="hft-bg bg-no-repeat bg-right bg-auto h-auto flex flex-col px-4 lg:px-24 xl:px-36 mb-16 md:mb-12"
       ref={nftRef}
     >
       <div className="flex flex-col items-center align-middle space-y-10">
@@ -75,9 +75,9 @@ export default function NFTMarketPlace() {
           </p>
         </div>
 
-        <div className="hidden md:flex justify-between space-x-8 mt-8">
+        <div className="flex justify-between space-x-8 mt-8">
           <div
-            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            className="w-3/12 md:w-44 h-32 md:h-64 hover:shadow rounded border-b md:border-b-2 border-t md:border-t-2 border-pink-400 flex flex-col space-y-1 md:space-y-4 items-center justify-center py-8 px-1 md:px-2 text-center"
             ref={cardOneRef}
           >
             <div className="balls">
@@ -85,10 +85,10 @@ export default function NFTMarketPlace() {
               <div></div>
               <div></div>
             </div>
-            <p className="text-gray-500 text-sm">coming soon</p>
+            <p className="text-gray-500 text-xs md:text-sm">coming soon</p>
           </div>
           <div
-            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            className="w-3/12 md:w-44 h-32 md:h-64 hover:shadow rounded border-b md:border-b-2 border-t md:border-t-2 border-pink-400 flex flex-col space-y-1 md:space-y-4 items-center justify-center py-8 px-1 md:px-2 text-center"
             ref={cardTwoRef}
           >
             <div className="balls">
@@ -96,10 +96,10 @@ export default function NFTMarketPlace() {
               <div></div>
               <div></div>
             </div>
-            <p className="text-gray-500 text-sm">coming soon</p>
+            <p className="text-gray-500 text-xs md:text-sm">coming soon</p>
           </div>
           <div
-            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            className="w-3/12 md:w-44 h-32 md:h-64 hover:shadow rounded border-b md:border-b-2 border-t md:border-t-2 border-pink-400 flex flex-col space-y-1 md:space-y-4 items-center justify-center py-8 px-1 md:px-2 text-center"
             ref={cardThreeRef}
           >
             <div className="balls">
@@ -107,10 +107,10 @@ export default function NFTMarketPlace() {
               <div></div>
               <div></div>
             </div>
-            <p className="text-gray-500 text-sm">coming soon</p>
+            <p className="text-gray-500 text-xs md:text-sm">coming soon</p>
           </div>
           <div
-            className="w-44 h-64 hover:shadow rounded border-b-2 border-t-2 border-pink-400 flex flex-col space-y-4 items-center justify-center py-8 px-2 text-center"
+            className="w-3/12 md:w-44 h-32 md:h-64 hover:shadow rounded border-b md:border-b-2 border-t md:border-t-2 border-pink-400 flex flex-col space-y-1 md:space-y-4 items-center justify-center py-8 px-1 md:px-2 text-center"
             ref={cardFourRef}
           >
             <div className="balls">
@@ -118,14 +118,14 @@ export default function NFTMarketPlace() {
               <div></div>
               <div></div>
             </div>
-            <p className="text-gray-500 text-sm">Coming soon</p>
+            <p className="text-gray-500 text-xs md:text-sm">Coming soon</p>
           </div>
         </div>
         <div
-          className="bg-gradient-to-br from-purple-400 to-pink-400 py-6 hidden md:flex flex-col items-center w-10/12 h-72 rounded-lg justify-center"
+          className="bg-gradient-to-br from-purple-400 to-pink-400 px-2 py-2 text-center md:py-6 md:px-0 flex flex-col items-center  w-11/12 h-36 md:h-72 rounded-lg justify-center"
           ref={mintRef}
         >
-          <span className="text-white font-bold tracking-wider text-3xl cursor-pointer">
+          <span className="text-white font-bold tracking-wider text-lg md:text-3xl cursor-pointer">
             Are you an artist? Mint your NFT NOW
           </span>
         </div>

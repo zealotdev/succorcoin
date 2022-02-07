@@ -120,7 +120,7 @@ export default function Nav() {
   return (
     <div>
       <div className="py-3 bg-gray-100">
-        <div className="px-4 lg:px-24 xl:px-36 mx-auto text-gray-500 text-sm flex justify-between content-center">
+        <div className="px-4 lg:px-20 xl:px-32 text-gray-500 text-sm flex justify-between content-center">
           <span className="flex space-x-2 cursor-pointer text-gray-400 hover:text-pink-400">
             <MdMarkEmailUnread size={25} /> <span>jorgedoe@gmail.com</span>
           </span>
@@ -253,8 +253,8 @@ export default function Nav() {
         {/* )} */}
       </nav>
       {/* Large Screen Nav */}
-      <nav className="hidden md:block bg-white py-4 border-t-2 border-gray-100 shadow">
-        <div className="max-w-5xl mx-auto flex justify-between items-center">
+      <nav className="hidden md:block bg-white py-4 border-t-2 border-gray-100 shadow ">
+        <div className="md:px-4 lg:px-20 xl:px-32 flex justify-between items-center">
           <Image
             src="/logo-large.png"
             width={150}
@@ -287,7 +287,7 @@ export default function Nav() {
                 )}
               </li>
             </ul>
-            <button className="bg-pink-400 rounded-full text-white py-2 px-3 text-sm uppercase hover:bg-pink-500 hover:scale-105 duration-200 ">
+            <button className="bg-pink-400 rounded-full text-white py-2 px-2 text-xs lg:py-2 lg:px-3 lg:text-sm uppercase hover:bg-pink-500 hover:scale-105 duration-200 ">
               Join Airdrop
             </button>
           </div>

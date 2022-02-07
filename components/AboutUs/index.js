@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function AboutUs() {
   const aboutRef = useRef();
   const imageRef = useRef();
+  const imageMobileRef = useRef();
   const headRef = useRef();
   const textRef = useRef();
   const featureRef1 = useRef();
@@ -19,7 +20,7 @@ export default function AboutUs() {
         scrollTrigger: {
           trigger: aboutRef.current,
           start: 'top 90%',
-          end: 'top 60%',
+          end: 'bottom 80%',
           markers: false,
           scrub: 1,
         },
@@ -39,11 +40,12 @@ export default function AboutUs() {
       .fromTo(
         imageRef.current,
         {
-          x: 120,
+          x: 90,
         },
         {
           x: 0,
           duration: 2,
+          ease: 'elastic.out(1,0.3)',
         },
         '-=1'
       )
@@ -74,17 +76,22 @@ export default function AboutUs() {
           duration: 2,
         },
         '-=2'
+      )
+      .fromTo(
+        imageMobileRef.current,
+        { y: 100, opacity: 0.2 },
+        { y: 0, opacity: 1, duration: 2, ease: 'elastic.out(1,0.3)' }
       );
   }, []);
 
   return (
-    <section className="about-us-bg bg-no-repeat bg-left bg-contain">
+    <section className="about-us-bg bg-no-repeat bg-left bg-contain mb-16 md:mb-12">
       <div
         ref={aboutRef}
-        className="hidden md:flex flex-col justify-center lg:px-24 xl:px-36"
+        className="flex flex-col justify-center px-4 lg:px-24 xl:px-36"
       >
-        <div className="flex justify-between">
-          <div className="flex flex-col space-y-4 w-6/12">
+        <div className="flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col space-y-4 md:w-6/12">
             <h2 className="text-sm text-purple-400 tracking-wider uppercase">
               About Us
             </h2>
@@ -104,31 +111,55 @@ export default function AboutUs() {
               through community ownership.
             </p>
 
-            <div className="flex justify-between">
-              <span
-                className="rounded-full border-8 border-pink-400 flex flex-col justify-center items-center w-40 h-40 space-y-1"
-                ref={featureRef1}
-              >
-                <span className="font-extrabold text-xl">75%</span>
-                <p className="text-gray-500">BLOCKCHAIN</p>
-              </span>
-              <span
-                className="rounded-full border-8 border-pink-400 flex flex-col justify-center items-center w-40 h-40 space-y-1"
-                ref={featureRef2}
-              >
-                <span className="font-extrabold text-xl">80%</span>
-                <p className="text-gray-500">COMMUNITY</p>
-              </span>
-              <span
-                className="rounded-full border-8 border-pink-400 flex flex-col justify-center items-center w-40 h-40 space-y-1"
-                ref={featureRef3}
-              >
-                <span className="font-extrabold text-xl">70%</span>
-                <p className="text-gray-500">CHARITY</p>
-              </span>
+            <div className="flex justify-between items-center md:block">
+              <div className="flex flex-col md:flex-row space-y-2 md:space-x-4 md:space-y-0 justify-between">
+                <span
+                  className="rounded-full border-4 md:border-6 lg:border-8 border-pink-400 flex flex-col justify-center items-center w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 md:space-y-1"
+                  ref={featureRef1}
+                >
+                  <span className="font-bold md:font-extrabold text-sm md:text-xl">
+                    75%
+                  </span>
+                  <p className="text-gray-500">BLOCKCHAIN</p>
+                </span>
+                <span
+                  className="rounded-full border-4 md:border-6 lg:border-8 border-pink-400 flex flex-col justify-center items-center w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 md:space-y-1"
+                  ref={featureRef2}
+                >
+                  <span className="font-bold md:font-extrabold text-sm md:text-xl">
+                    80%
+                  </span>
+                  <p className="text-gray-500">COMMUNITY</p>
+                </span>
+                <span
+                  className="rounded-full border-4 md:border-6 lg:border-8 border-pink-400 flex flex-col justify-center items-center w-28 h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 md:space-y-1"
+                  ref={featureRef3}
+                >
+                  <span className="font-bold md:font-extrabold text-sm md:text-xl">
+                    70%
+                  </span>
+                  <p className="text-gray-500">CHARITY</p>
+                </span>
+              </div>
+              <div ref={imageMobileRef} className="md:hidden">
+                <Image
+                  src="/logo.png"
+                  height={200}
+                  width={200}
+                  alt="succorcoin-shield"
+                />
+              </div>
             </div>
           </div>
-          <div ref={imageRef}>
+          <div ref={imageRef} className="hidden md:block lg:hidden">
+            <Image
+              src="/logo.png"
+              height={320}
+              width={320}
+              alt="succorcoin-shield"
+            />
+          </div>
+          <div ref={imageRef} className="hidden lg:block">
             <Image
               src="/logo.png"
               height={400}
