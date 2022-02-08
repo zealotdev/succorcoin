@@ -59,7 +59,7 @@ export default function Hero() {
   }, []);
   return (
     <div>
-      <div className="flex flex-col md:flex md:flex-row justify-between my-24 mb-36 md:my-22 lg:my-32 px-4 lg:px-24 xl:px-36 ">
+      <div className="flex flex-col md:flex md:flex-row justify-between my-24 mb-36 md:my-22 lg:my-32 px-4 lg:px-24 xl:px-36">
         <div ref={leftContent} className="relative md:w-6/12 space-y-6">
           <span
             className="text-purple-400 uppercase text-sm tracking-wider font-semibold"
