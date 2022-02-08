@@ -30,11 +30,6 @@ section {
 }
 .about-us-bg {
   background-image: url('/images/about-right-dec.jpg');
-  height: 60vh;
-}
-
-.ecosystem {
-  min-height: calc(100vh - 220px);
 }
 
 .hft-bg {
@@ -44,5 +39,4 @@ section {
 
 footer {
   background-image: url('/images/roadmap-bg.svg');
-  min-height: 20vh;
 }
