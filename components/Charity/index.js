@@ -32,17 +32,17 @@ export default function Charity() {
 
     tl.fromTo(
       titleRef.current,
-      { opacity: 0, y: -50 },
+      { opacity: 0, y: -20 },
       { opacity: 1, y: 0, duration: 2 }
     )
       .fromTo(
         firstInputRef.current,
-        { opacity: 0, x: -50 },
+        { opacity: 0, x: -20 },
         { opacity: 1, x: 0, duration: 2 }
       )
       .fromTo(
         secondInputRef.current,
-        { opacity: 0, x: 50 },
+        { opacity: 0, x: 20 },
         { opacity: 1, x: 0, duration: 2 },
         '-=1'
       )
@@ -64,7 +64,7 @@ export default function Charity() {
   const address = '0x5ebf759767827ba3a1763f8ed7fa61ed9abf27b7';
   return (
     <section className="bg-gradient-to-br from-purple-400 to-pink-400 flex justify-center py-14 mb-16 md:mb-12">
-      <div className="flex flex-col items-center text-center space-y-8">
+      <div className="flex flex-col items-center text-center space-y-8 px-4 lg:px-0">
         <div className="flex flex-col items-center space-y-2" ref={titleRef}>
           <h2 className="text-sm text-white tracking-wider uppercase">
             Charity

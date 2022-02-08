@@ -35,7 +35,7 @@ export default function AboutUs() {
     tl.fromTo(
       aboutRef.current,
       { opacity: 0.1, y: 100 },
-      { opacity: 1, y: -20, duration: 1 }
+      { opacity: 1, y: -20, duration: 2 }
     )
       .fromTo(
         imageRef.current,
@@ -61,7 +61,7 @@ export default function AboutUs() {
           duration: 2,
           stagger: 0.4,
         },
-        '-=2'
+        '-=1'
       )
       .fromTo(
         [headRef.current, textRef.current],
@@ -75,7 +75,7 @@ export default function AboutUs() {
           stagger: 0.4,
           duration: 2,
         },
-        '-=2'
+        '-=4'
       )
       .fromTo(
         imageMobileRef.current,
