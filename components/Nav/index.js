@@ -158,7 +158,7 @@ export default function Nav() {
         {/* Menu Links */}
         <div ref={(el) => (menuRef = el)} className="hidden">
           <div
-            className="flex flex-col justify-center bg-gradient-to-tr from-purple-400 to-pink-400 absolute top-30 mt-4 left-0 h-full w-full overflow-hidden"
+            className="flex flex-col justify-center bg-gradient-to-tr from-purple-400 to-pink-400 absolute z-50 top-30 mt-4 left-0 h-full w-full overflow-hidden"
             ref={(el) => (menuWrapperRef = el)}
           >
             <ul className="flex flex-col space-y-8 text-white text-lg font-semibold tracking-widest text-center items-center">
